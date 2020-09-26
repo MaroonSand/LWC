@@ -1,0 +1,13 @@
+<template>
+    <div class="slds-var-m-top_medium slds-var-m-bottom_x-large">
+        <div class="slds-var-p-around_medium lgc-bg">
+            <lightning-input type="text" label="First Name" name="firstName" value={firstNameInput} onchange={handleChange}></lightning-input>
+        </div>
+        <div class="slds-var-p-around_medium lgc-bg">
+            <lightning-input type="text" label="Last Name" name="lastName" value={lastNameInput} onchange={handleChange}></lightning-input>
+        </div>
+
+        <lightning-button variant="brand" label="Brand" title="Primary action" onclick={buttonClicked} class="slds-var-m-left_x-small"></lightning-button>
+        
+    </div>
+</template>

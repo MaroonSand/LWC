@@ -1,12 +1,27 @@
 <template>
+    <lightning-card class="slds-text-title_bold" title={sizeTitle} icon-name="custom:custom26">
+    </lightning-card>                        
+    <lightning-card>
+        {size}
+    <div class="slds-var-p-around_medium lgc-bg">
     <lightning-dual-listbox name="languages"
                             label="Select a solution interest"
                             source-label="Available"
                             selected-label="Selected"
-                            field-level-help="Select one or more solution interests. The left side displays solution interests"
+                            field-level-help={help}
                             options={options}
-                            values={values}
+                            value={values}
+                            size="10"
                             onchange={handleChange}></lightning-dual-listbox>
-    <div class="slds-box" >
-    </div>
+                        </div>
+    </lightning-card>
+    <div class="slds-card">
+        <div class="slds-align_absolute-center">
+            <!-- Toggle visibility of a content block when clicked -->
+            <lightning-button-group>
+                <lightning-button label="Save" variant="brand" icon-name="utility:save" onclick={saveRecord}></lightning-button>
+                <lightning-button label="Cancel" variant="destructive" icon-name="standard:cancel_checkout" onclick={closeQuickAction}></lightning-button>
+            </lightning-button-group>
+        </div>
+    </div>   
 </template>
